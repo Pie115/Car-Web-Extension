@@ -25,7 +25,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                let estimatedPrice = data.price?.estimateTmv || data.price?.baseMsrp; // Example of accessing nested pricing information
+                let estimatedPrice = data.price?.estimateTmv || data.price?.baseMsrp; 
                 sendResponse({data: data, estimatedPrice: estimatedPrice});
             })
             .catch(error => sendResponse({error: error.toString()}));
