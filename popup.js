@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
             chrome.runtime.sendMessage({action: "fetchVIN", vin: vin}, function(response) {
                 if (response.data) {
                     const price = response.data.price || "Price not available";
-                    const modelDescription = response.data.description;
-                    const model = modelDescription.includes("Transit-350") ? "Ford Transit-350" : "Model not found";
                     const resultText = `Price: ${price}`;
                     document.getElementById('result').textContent = resultText;
                 } else if (response.error) {
