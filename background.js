@@ -9,7 +9,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       .then(response => response.json())
       .then(data => sendResponse({data: data}))
       .catch(error => sendResponse({error: error.toString()}));
-      
-      return true; // Indicates that the response is asynchronous
+      return true; 
     }
   });
