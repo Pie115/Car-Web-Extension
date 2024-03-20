@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIN Reader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            width: 300px;
+        }
+        #vinInput {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #submitBtn {
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Check VIN</h2>
+    <input type="text" id="vinInput" placeholder="Enter VIN here">
+    <button id="fetchButton">Fetch VIN</button>
+    <div id="result"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
